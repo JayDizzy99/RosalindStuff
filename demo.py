@@ -1,6 +1,7 @@
 import random
 
 def generate_strand(length):
+    nucleotides = ['A', 'C', 'T', 'G']
     return ''.join([random.choice(nucleotides) for _ in range(length)])
 
 def translate_strand(strand):
@@ -17,7 +18,6 @@ def convert(chain):
     RNA = chain.replace('T', 'U')
     return RNA
 
-nucleotides = ['A', 'C', 'T', 'G']
 length = int(input('How many base pairs would you like there to be? '))
 strand = generate_strand(length)
 strand2 = translate_strand(strand)
