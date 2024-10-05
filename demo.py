@@ -1,3 +1,4 @@
+from collections import Counter
 import random
 
 def generate_strand(length):
@@ -13,6 +14,9 @@ def basecount(chain):
     for base in chain:
         counts[base] += 1
     return counts
+
+def basecount2(chain):
+    return Counter(chain)
 
 def convert(chain):
     RNA = chain.replace('T', 'U')
